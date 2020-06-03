@@ -18,3 +18,14 @@ prebuilt_etc {
     src: "etc/fstab.qcom",
     vendor_overlay: true,
 }
+
+cc_library_static {
+    name: "libinit_oneplus7t",
+    recovery_available: true,
+    shared_libs: ["libbase"],
+    srcs: ["libinit_oneplus7t.cpp"],
+    include_dirs: [
+        "system/core/base/include",
+        "system/core/init"
+    ]
+}
