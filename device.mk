@@ -19,6 +19,12 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/oneplus/oneplus7t/oneplus7t-vendor.mk)
 
+# Overlays
+PRODUCT_PACKAGES += \
+    OnePlus7TSeriesFrameworks \
+    OnePlus7TFrameworks \
+    OnePlus7TProFrameworks
+
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
