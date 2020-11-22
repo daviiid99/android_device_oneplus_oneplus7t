@@ -29,5 +29,19 @@ PRODUCT_PACKAGES += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# A/B
+AB_OTA_PARTITIONS += \
+    product \
+    system_ext \
+    vbmeta_system
+
+# Ramdisk
+PRODUCT_PACKAGES += \
+    fstab.qcom
+
+# Partitions
+PRODUCT_BUILD_SUPER_PARTITION := false
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # Inherit from sm8150-common
 $(call inherit-product, device/oneplus/sm8150-common/sm8150.mk)
