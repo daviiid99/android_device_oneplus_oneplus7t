@@ -24,8 +24,4 @@ cc_library_static {
     recovery_available: true,
     shared_libs: ["libbase"],
     srcs: ["libinit_oneplus7t.cpp"],
-    include_dirs: [
-        "system/core/base/include",
-        "system/core/init"
-    ]
 }
